@@ -1,0 +1,14 @@
+## Comandos de configuración
+
+A continuación se listan los comandos utilizados para configurar la aplicación:
+
+* **`composer create-project --prefer-dist laravel/laravel json-api`**: Crea un nuevo proyecto Laravel llamado "json-api" utilizando la última versión estable del framework.
+
+* **`git init`**: Inicializa un repositorio Git local dentro del proyecto.
+* **`git remote add origin <URL de tu repositorio Git>`**:  Añade la URL de tu repositorio remoto como "origin".
+* **`git add .`**:  Agrega todos los archivos del proyecto al staging area para el commit.
+* **`git commit -m "Commit inicial"`**:  Crea un commit inicial con el mensaje "Commit inicial".
+* **`git push -u origin main`**: Sube los cambios a la rama "main" del repositorio remoto.
+* **`php artisan key:generate`**: Genera una clave única para la aplicación, utilizada para cifrar datos y sesiones.
+* **`php artisan migrate`**: Ejecuta las migraciones de la base de datos, creando las tablas necesarias para la aplicación.
+* **`php artisan db:seed`**: (Opcional) Ejecuta los seeders, que rellenan la base de datos con datos de ejemplo.
