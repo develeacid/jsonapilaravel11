@@ -27,3 +27,5 @@ Se integra con otros paquetes de Laravel, como Laravel Test Assertions.
 
 * **`php artisan install:api`**: Instala la configuración básica para una API en Laravel, incluyendo la autenticación con Sanctum y las rutas de API.
 * **`php artisan make:test Articles/ListArticlesTest`**: Crea un test para la funcionalidad de listar artículos.
+
+* **`php artisan make:resource ArticleResource`**: Este comando se usa para crear un Resource en Laravel, que es una clase que se encarga de transformar tu modelo de datos antes de enviarlos al cliente, generalmente en una respuesta JSON
