@@ -8,4 +8,5 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('v1/articles/{article}', [ArticleController::class, 'show']);
+Route::get('v1/articles/{article}', [ArticleController::class, 'show'])
+->name('api.v1.articles.show');

@@ -17,8 +17,21 @@ class ListArticlesTest extends TestCase
 
         $article = Article::factory()->create();
 
-        $response = $this->getJson('/api/v1/articles/'.$article->getRouteKey());
+        $response = $this->getJson(route('api.v1.articles.show', $article));
 
-        $response->assertSee($article->title);
+        $response->assertExactJson([
+            'data' => [
+                'type' => 'article', 
+                'id' => (string) $article->getRouteKey(),
+                'attributes' => [
+                    'title' => $article->title,
+                    'slug'=> $article->slug, 
+                    'content' => $article->content
+                ],
+                'links' => [
+                    'self' => route('api.v1.articles.show', $article)
+                ]
+            ]
+        ]);
     }
 }
