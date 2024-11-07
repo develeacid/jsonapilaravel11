@@ -24,3 +24,6 @@ Se integra con otros paquetes de Laravel, como Laravel Test Assertions.
 * **`php artisan blueprint:new`**: Crea un archivo `draft.yaml` en la raíz del proyecto. Este archivo se utiliza para definir la estructura de la aplicación, incluyendo modelos, controladores y otras clases, utilizando la sintaxis YAML de Blueprint.
 * **`php artisan vendor:publish`**: Publica los archivos de configuración de un paquete específico. En este caso, probablemente se usó para publicar la configuración de Blueprint o de algún otro paquete que estés utilizando.  
 * **`php artisan blueprint:build`**: Genera el código de la aplicación (modelos, controladores, etc.) basándose en la estructura definida en el archivo `draft.yaml`.
+
+* **`php artisan install:api`**: Instala la configuración básica para una API en Laravel, incluyendo la autenticación con Sanctum y las rutas de API.
+* **`php artisan make:test Articles/ListArticlesTest`**: Crea un test para la funcionalidad de listar artículos.
