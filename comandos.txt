@@ -12,3 +12,12 @@ A continuación se listan los comandos utilizados para configurar la aplicación
 * **`php artisan key:generate`**: Genera una clave única para la aplicación, utilizada para cifrar datos y sesiones.
 * **`php artisan migrate`**: Ejecuta las migraciones de la base de datos, creando las tablas necesarias para la aplicación.
 * **`php artisan db:seed`**: (Opcional) Ejecuta los seeders, que rellenan la base de datos con datos de ejemplo.
+
+* **`composer require laravel-shift/blueprint --dev`**: Instala  Laravel Blueprint como una dependencia de desarrollo. Blueprint es una herramienta que permite generar código para modelos, controladores y otras clases de Laravel a partir de una definición simple y legible. La opción `--dev` indica que es una dependencia solo para desarrollo, no para producción.
+Información adicional sobre Laravel Blueprint:
+
+Permite definir modelos, controladores, migraciones, seeders, factories, formularios y tests con una sintaxis YAML sencilla.
+Automatiza la generación de código repetitivo, ahorrando tiempo y esfuerzo.
+Facilita la creación de prototipos y la iteración rápida en el desarrollo.
+Se integra con otros paquetes de Laravel, como Laravel Test Assertions.
+
