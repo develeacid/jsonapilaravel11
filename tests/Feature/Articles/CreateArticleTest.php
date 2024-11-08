@@ -50,4 +50,61 @@ class CreateArticleTest extends TestCase
             ]            
         ]);
     }
+    /** @test */
+    public function title_is_required()
+    {
+        $response = $this->postJson(route('api.v1.articles.create'), [
+            'data' => [
+                'type' => 'articles',
+                'attributes' => [
+                    'slug' => 'nuevo-articulo',
+                    'content' => 'Contenido del artículo'
+                ]
+            ]
+        ])->dump();
+        $response->assertJsonValidationErrors('data.attributes.title');
+    }
+    /** @test */
+    public function title_must_be_at_least_4_characters()
+    {
+        $response = $this->postJson(route('api.v1.articles.create'), [
+            'data' => [
+                'type' => 'articles',
+                'attributes' => [
+                    'title' => 'Nue',
+                    'slug' => 'nuevo-articulo',
+                    'content' => 'Contenido del artículo'
+                ]
+            ]
+        ]);
+        $response->assertJsonValidationErrors('data.attributes.title');
+    }
+    /** @test */
+    public function slug_is_required()
+    {
+        $response = $this->postJson(route('api.v1.articles.create'), [
+            'data' => [
+                'type' => 'articles',
+                'attributes' => [
+                    'title' => 'Nuevo Articulo',
+                    'content' => 'Contenido del artículo'
+                ]
+            ]
+        ]);
+        $response->assertJsonValidationErrors('data.attributes.slug');
+    }
+    /** @test */
+    public function content_is_required()
+    {
+        $response = $this->postJson(route('api.v1.articles.create'), [
+            'data' => [
+                'type' => 'articles',
+                'attributes' => [
+                    'title' => 'Nuevo Articulo',
+                    'slug' => 'nuevo-articulo'
+                ]
+            ]
+        ]);
+        $response->assertJsonValidationErrors('data.attributes.content');
+    }
 }
