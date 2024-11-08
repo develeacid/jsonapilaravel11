@@ -13,3 +13,6 @@ Route::get('v1/articles', [ArticleController::class, 'index'])
 
 Route::get('v1/articles/{article}', [ArticleController::class, 'show'])
 ->name('api.v1.articles.show');
+
+Route::post('v1/articles', [ArticleController::class, 'create'])
+->name('api.v1.articles.create');
