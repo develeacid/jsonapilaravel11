@@ -31,3 +31,6 @@ Se integra con otros paquetes de Laravel, como Laravel Test Assertions.
 * **`php artisan make:resource ArticleResource`**: Este comando se usa para crear un Resource en Laravel, que es una clase que se encarga de transformar tu modelo de datos antes de enviarlos al cliente, generalmente en una respuesta JSON
 
 * **`php artisan make:test Articles/CreateArticleTest`**: Crea un test para la funcionalidad de crear artículos.
+
+* **`php artisan make:test ValidateJsonApiHeadersTest`**: Crea un test para verificar encabezados en solicitudes JSON:API.
+* **`php artisan make:middleware ValidateJsonApiHeaders`**: Crea un middleware para asegurar que las solicitudes cumplan con los encabezados JSON:API.
