@@ -16,8 +16,8 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $articles = Article::all();
+        //$articles = Article::all();
 
-        return ArticleCollection::make($articles);
+        return ArticleCollection::make(Article::all());
     }
 }
